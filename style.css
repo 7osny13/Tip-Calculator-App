@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+:root{
+    --Strong-cyan: hsl(172, 67%, 45%);
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Dark-grayish-cyan: hsl(186, 14%, 43%);
+    --Grayish-cyan: hsl(184, 14%, 56%);
+    --Light-grayish-cyan: hsl(185, 41%, 84%);
+    --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Space Mono", serif;
+    background-color: var(--Light-grayish-cyan);
+    width: 100vw;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+
+.main-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    background-color: var(--White);
+    height: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 40px;
+}
+
+.inputs p {
+    color: var(--Grayish-cyan);
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.inputs input {
+    width: 90%;
+    padding: 3px;
+    border-radius: 5px;
+    border-color: transparent;
+    background-color: var(--Light-grayish-cyan);
+    outline: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: right;
+    font-size: 1.5rem;
+    color: var(--Very-dark-cyan);
+    font-weight: 700;
+}
+
+.bill input {
+    background-image: url(images/icon-dollar.svg);
+    background-repeat: no-repeat;
+    background-position: 7px 7px;
+}
+
+.people input {
+    background-image: url(images/icon-person.svg);
+    background-repeat: no-repeat;
+    background-position: 7px 7px;
+}
+
+
+.tip .tip-title {
+    color: var(--Grayish-cyan);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.tip-choices {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tip-choices > p {
+    flex-basis: calc(50% - 20px);
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 8px 25px;
+    background-color: var(--Very-dark-cyan);
+    color: var(--White);
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.2rem;
+    border-radius: 5px; 
+    cursor: pointer;
+}
+
+.tip-choices > p:hover {
+    background-color: var(--Strong-cyan);
+}
+
+.tip-choices .custom {
+    background-color: var(--Very-light-grayish-cyan);
+    color: var(--Dark-grayish-cyan);
+    width: 44%;
+    padding: 3px;
+    border-radius: 5px;
+    border-color: transparent;
+    background-color: var(--Light-grayish-cyan);
+    outline: none;
+    margin-top: 2px;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.calc {
+    background-color: var(--Very-dark-cyan);
+    margin-top: 20px ;
+    border-radius: 20px;
+    padding: 40px 20px;
+    
+}
+
+.amount , .total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.calc h1 {
+    color: var(--Strong-cyan);
+}
+
+
+.amount p:nth-child(1) , .total p:nth-child(1) {
+    color: var(--White);
+    font-weight: 600;
+}
+
+.amount p:nth-child(2) , .total p:nth-child(2) {
+    color: var(--Grayish-cyan);
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: var(--Strong-cyan);
+    cursor: pointer;
+    outline: none;
+    border-color: transparent;
+}
+
+button:hover {
+    background-color: var(--Light-grayish-cyan);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+@media screen and (min-width:1440px) {
+    
+    body{
+        width: 95vw;
+    }
+    
+    .main-section{
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        height: 70vh;
+        border-radius: 20px;
+    }
+    
+    .tip , .bill , .people {
+        width: 50%;
+    }
+    
+    .calc {
+        height: 100%;
+        width: 50%;
+        position: relative;
+        margin-left: 20px;
+    }
+
+    button {
+        position: absolute;
+        bottom: 50px;
+        width: 90%;
+    }
+    
+}
+
+
+
+
+
